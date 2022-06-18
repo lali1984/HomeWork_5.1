@@ -20,8 +20,9 @@
 #include <chrono>
 #include "Header.h"
 
-int main() {
-	std::vector<int> firstVector(100);
+int main()
+{
+	std::vector<int> firstVector(10000);
 	int i = 0;
 	int num = 59;
 
@@ -46,6 +47,7 @@ int main() {
 	Time(t0, t1);
 
 	std::cout << "Case #2:\n";
+
 	t0 = std::chrono::high_resolution_clock::now();
 	EraseNumbers(firstVector);
 	t1 = std::chrono::high_resolution_clock::now();
@@ -71,6 +73,7 @@ int main() {
 
 	std::vector<int> fourthVector(6000);
 	ThreadInitial(fourthVector);
+
 	t0 = std::chrono::high_resolution_clock::now();
 	EraseRemoveInterval(fourthVector);
 	t1 = std::chrono::high_resolution_clock::now();
